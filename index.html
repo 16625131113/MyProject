@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<!-- 视图设置 -->
+			<!-- 只能被移动设备识别  -->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+		<!-- 设置IE渲染方式默认为最高 -->
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+		<!-- 引入兼容js文件 -->
+		<!-- [if lt IE 9]>
+			<script src="https://oss.maxcdn.cm/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<script src="https://oss.maxcdn.cm/libs/responed.js//responed.min.js"></script>
+		<![endif] -->
+		<link rel="stylesheet" type="text/css" href="./css/index.css"/>
+		<link rel="stylesheet" href="./css/screen640.css" media="screen and (max-width:640px)" />
+		<link rel="stylesheet" href="./css/screen1024.css" media="screen and (min-width:640px) and (max-width:1024px)" />
+		<link rel="stylesheet" href="./css/screenMax.css" media="screen and (min-width:1024px)" />
+	</head>
+	<body>
+		<div id="app-view-wrapper">
+			<!-- 导航条 -->
+			<nav id="nav">
+				<!-- 原导航条 -->
+				<div class="container">
+					<div class="header">
+						<a class="log">
+							<img src="./img/logo.svg" >
+						</a>
+						<div class="primary">
+							<ul>
+								<li class="stores"><a href="">门店</a></li>
+								<li class="account"><a href="">我的帐户</a></li>
+								<li class="menu"><a href="">菜单</a></li>
+							</ul>
+						</div>
+						<a id="btn-open" class="icon trigger">
+							<img src="./img/icon-hamburger.svg" >
+						</a>
+					</div>
+					<div class="body">
+						<div class="account-entry middle container">
+							<div class="content">
+								<span>
+									<div class="display-1">
+										<span>心情惬意，来杯咖啡吧&nbsp;☕</span>
+									</div>
+									<footer>
+										<a class="sign-in">
+											<img src="./img/icon-account.svg" alt="登录">
+											<span>登录</span>
+										</a>
+										<a href="" class="button register">
+											<span><span>注册</span></span>
+										</a>
+									</footer>
+								</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- 覆盖导航条-->
+				<div class="overlay">
+					<div class="container">
+						<div class="header">
+							<a class="log">
+								<img src="./img/logo.svg" >
+							</a>
+							<a class="icon trigger close" id="btn-close">
+								<img src="./img/icon-close.svg" >
+							</a>
+						</div>
+						<section class="body">
+							<div class="container">
+								<ul>
+									<li><a href="">门店</a></li>
+									<li><a href="">星享俱乐部</a></li>
+									<li><a href="">菜单</a></li>
+									<li><hr></hr></li>
+									<li><a href="">星巴克移动应用</a></li>
+									<li><a href="">星礼卡</a></li>
+									<li><a href="">星巴克臻选™</a></li>
+									<li><a href="">啡快™ － 在线点 到店取</a></li>
+									<li><a href="">专星送™</a></li>
+									<li><a href="">咖啡星讲堂</a></li>
+									<li><a href="">上海烘焙工坊</a></li>
+									<li><a href="">关于星巴克</a></li>
+									<li><a href="">帮助中心</a></li>
+									<li><hr></hr></li>
+								</ul>
+								<footer>
+									<a class="sign-in">
+										<img src="./img/icon-account.svg" alt="登录">
+										<span>登录</span>
+									</a>
+									<a href="" class="button register">
+										<span><span>注册</span></span>
+									</a>
+								</footer>
+							</div>
+						</section>
+						<footer class="footer">
+							<div class="container">
+								<a href="">English</a>&nbsp;&nbsp;
+								<a href="">隐私政策</a>&nbsp;&nbsp;
+								<a href="">使用条款</a>
+							</div>
+						</footer>
+					</div>
+				</div>
+			</nav>
+			<section id="content">
+				<!-- 轮播图 -->
+				<section class="banner">
+					<div class="tag_ad">
+						广告
+					</div>
+					<div class="banner-box">
+						<div id="slick-list">
+							<ul>
+								<li><a href="https://www.starbucks.com.cn/account/starbucks-rewards" target="_blank">
+										<img src="./img/max1.jpg" class="maxImg" alt="">
+										<img src="./img/min1.jpg" class="minImg" alt="">
+								</a></li>
+								<li><a href="https://www.starbucks.com.cn/menu/" target="_blank">
+										<img src="./img/max2.jpg" class="maxImg" alt="">
+										<img src="./img/min2.jpg" class="minImg" alt="">
+								</a></li>
+								<li><a href="https://www.starbucks.com.cn/account/starbucks-rewards" target="_blank">
+										<img src="./img/max1.jpg" class="maxImg" alt="">
+										<img src="./img/min1.jpg" class="minImg" alt="">
+								</a></li>
+							</ul>
+						</div>
+						<button type="button" class="slick-next">next</button>
+					</div>
+				</section>
+				<!-- 推荐 -->
+				<section class="promotion">
+					<div class="wrapper">
+						<div class="flex">
+							<a href="https://starbucks.tmall.com/">
+								<img src="./img/promotion/tmall-2020-06-29-zh.jpg" class="promoImg" alt=""></a>
+							<a href="https://www.starbucks.com.cn/design-studio/">
+								<img src="./img/promotion/starbucks-design-studio-web-china.jpg" class="promoImg" alt=""></a>
+							<a href="https://www.starbucks.com.cn/about/careers/">
+								<img src="./img/promotion/homepage-career-cn.jpg" class="promoImg" alt=""></a>
+						</div>
+					</div>
+				</section>
+				<!-- 俱乐部 -->
+				<section class="bg-white" id="program-msr">
+					<div class="wrapper">
+						<div class="grid">
+							<div>
+								<h2 class="wrapper-mobile">星享俱乐部</h2> 
+								<p class="light">
+									开启您的星享之旅，星星越多、会员等级越高、好礼越丰富。
+									<a href="https://www.starbucks.com.cn/account/starbucks-rewards" class="link">
+										了解更多 ›
+									</a>
+								</p>
+								<p class="buttons">
+									<a href="" class="button">注册</a>
+									<a href="" class="button">登录</a>
+								</p>
+							</div>
+							<div class="imag">
+								<img src="./img/logo-msr-new.svg" >
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- 精选 -->
+				<section id="center">
+					<div class="wrapper">
+						<h2 class="wrapper-title">星巴克精选</h2>
+						<p class="light">在星巴克天猫旗舰店发现更多咖啡心意</p>
+						<ul class="wrapper-content">
+							<li >
+								<a href="">
+									<img src="./img/center/tmall-card-01.png" >
+									<p class="title-1">
+										<strong>会员星礼包</strong>
+									</p>
+									<p class="light">
+										星享卡新升级
+										<br>
+										更多心意好礼
+									</p>
+									<p class="caption">了解更多 ›</p>
+								</a>
+							</li>
+							<li >
+								<a href="">
+									<img src="./img/center/tmall-card-02.png" >
+									<p class="title-1">
+										<strong>星礼卡</strong>
+									</p>
+									<p class="light">
+										用一份心礼
+										<br>
+										让心意相随
+									</p>
+									<p class="caption">了解更多 ›</p>
+								</a>
+							</li>
+							<li >
+								<a href="">
+									<img src="./img/center/tmall-eticket.png" >
+									<p class="title-1">
+										<strong>电子产品券</strong>
+									</p>
+									<p class="light">
+										心意
+										<br>
+										从这一杯开始
+									</p>
+									<p class="caption">了解更多 ›</p>
+								</a>
+							</li>
+							<li >
+								<a href="">
+									<img src="./img/center/tmall-reserve.png" >
+									<p class="title-1">
+										<strong>咖啡生活</strong>
+									</p>
+									<p class="light">
+										星巴克
+										<br>
+										用心制作
+									</p>
+									<p class="caption">了解更多 ›</p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<!-- 讲坛 -->
+				<section id="coffeehouse">
+					<div class="house-title">
+						<h2 class="wrapper-title">1912 派克街 | 咖啡星讲堂</h2>
+						<p class="light">了解更多星巴克咖啡文化</p>
+					</div>
+					<div class="scroll-wrapper">
+						<div class="scroll">
+							<div class="view-wrapper">
+								<ul class="scroll-list">
+									<li class="scroll-item" >
+										<a href="" target="_blank">
+											<div class="preview" style="background-image: url(img/coffeehouse/coffeehouse-coffee-cultivation-kv.jpg);">
+											</div>
+											<span>咖啡知识</span>
+											<strong>咖啡的起源与培植</strong>
+										</a>
+									</li>
+									<li class="scroll-item" >
+										<a href="" target="_blank">
+											<div class="preview" style="background-image: url(img/coffeehouse/coffeehouse-4-fundamentals-kv.jpg);">
+											</div>
+											<span>咖啡品鉴</span>
+											<strong>咖啡调制</strong>
+										</a>
+									</li>
+									<li class="scroll-item" >
+										<a href="" target="_blank">
+											<div class="preview" style="background-image: url(img/coffeehouse/coffeehouse-roast-story-kv.jpg);">
+											</div>
+											<span>咖啡知识</span>
+											<strong>咖啡烘焙</strong>
+										</a>
+									</li>
+									<li class="scroll-item" >
+										<a href="" target="_blank">
+											<div class="preview" style="background-image: url(img/coffeehouse/coffeehouse-pour-over-kv.jpg);">
+											</div>
+											<span>咖啡品鉴</span>
+											<strong>咖啡品鉴</strong>
+										</a>
+									</li>
+								</ul>
+							</div>
+							<div class="btn-left btn">
+								<img src="./img/icon-scroll-left.svg" >
+							</div>
+							<div class="btn-right btn">
+								<img src="./img/icon-scroll-right.svg" >
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- 底部 -->
+				<footer>
+					<div class="license">
+						<a href="">
+							<img src="./img/icpicon.png" >
+							<span>
+							&nbsp;沪公网安备 31010402000253号
+							</span>
+						</a>
+							|
+						<a href="">沪ICP备17003747号</a>
+						</div>
+				</footer>
+				<div class="primary-mobile">
+					<ul>
+						<li>
+							<a href="" class="iconBtn">
+								<span>
+									<img src="img/footer/icon-home.svg" alt="" class="disActive"> 
+									<img src="./img/footer/icon-home-active.svg" alt="">
+								</span>
+								<div class="icon">主页</div>	
+							</a>
+						</li>
+						<li>
+							<a href="" class="iconBtn">
+								<span>
+									<img src="./img/footer/icon-stores.svg" alt="">
+									<img src="./img/footer/icon-stores-active.svg" alt="" class="disActive">
+								</span>
+								<div class="icon">门店</div>	
+							</a>
+						</li>
+						<li>
+							<a href="" class="iconBtn">
+								<span>
+									<img src="./img/footer/icon-account.svg" alt="">
+									<img src="./img/footer/icon-account-active.svg" alt="" class="disActive">
+								</span>
+								<div class="icon">我的账户</div>	
+							</a>
+						</li>
+						<li>
+							<a href="" class="iconBtn">
+								<span>
+									<img src="./img/footer/icon-menu.svg" alt="">
+									<img src="./img/footer/icon-menu-active.svg" alt="" class="disActive">
+								</span>
+								<div class="icon">菜单</div>	
+							</a>
+						</li>
+						<li>
+							<a class="iconBtn">
+								<span>
+									<img src="./img/footer/icon-more.svg" alt="">
+									<img src="./img/footer/icon-more-active.svg" alt="" class="disActive">
+								</span>
+								<div class="icon">更多</div>	
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+	</body>
+	<script src="./js/index.js" type="text/javascript" charset="utf-8"></script>
+</html>

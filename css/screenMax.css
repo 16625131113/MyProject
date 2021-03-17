@@ -1,0 +1,261 @@
+/* 通用样式 */
+html{
+	font-size: 62.5%;
+	
+}
+#nav{
+	width: 30%;
+	height: 100vh;
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	box-shadow: 0 0 4px rgba(0, 0, 0, 0.12);
+	z-index:1;
+}
+#nav .header{
+	padding: 24px;
+	height: 36px;
+	display: -webkit-flex; /* Safari */
+	position: relative;
+	display: block;
+	box-sizing: content-box;
+}
+#nav .log{
+	margin-right: 12px;
+	width: 36px;
+	float: left;
+	z-index: 1200;
+}
+#nav .log img{
+	width: 100%;
+	height: auto;
+}
+#nav .primary{
+	max-width: calc(100% - 72px);
+	float:left;
+}
+#nav .primary ul{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+#nav .primary ul a{
+	color: inherit;
+	display: block;
+	font-weight: 700;
+	font-size: 11px;
+	font-size: 1.1rem;
+	letter-spacing: 1px;
+	padding: 5px 10px 5px;
+	text-transform: uppercase;
+}
+#nav .primary ul a{
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+#nav .icon{
+	border: 0;
+	outline: none;
+	float: right;
+	display: block;
+	margin-top: 6px;
+}
+#nav .icon img{
+	display: block;
+	height: 24px;
+	opacity: 0.8;
+	-webkit-transition-duration: 0.1s;
+	transition-duration: 0.1s;
+	-webkit-transition-property: opacity, -webkit-transform;
+	transition-property: opacity, -webkit-transform;
+	transition-property: opacity, transform;
+	transition-property: opacity, transform, -webkit-transform;
+}
+#nav .header::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+hr{
+	display: block;
+	unicode-bidi: isolate;
+	margin-block-start: 0.5em;
+	margin-block-end: 0.5em;
+	margin-inline-start: auto;
+	margin-inline-end: auto;
+	overflow: hidden;
+	border-style: inset;
+	border-width: 1px;
+	background: rgba(0, 0, 0, 0.12);
+	border: 0;
+	height: 1px;
+	box-sizing: content-box;
+}
+/* 首页样式 */
+	/* 首页左侧 */
+#nav>.container{
+	width: 100%;
+	height: 100%;
+}
+#nav>.container{
+	overflow: hidden;
+}
+#nav .body{
+	display: table;
+	width: 100%;
+	height: calc(100% - 98px);
+}
+#nav .body .content{
+	box-sizing: border-box;
+	clear: both;
+	min-height: 62px;
+}
+#nav .body .container{
+	display: table-cell;
+    height: 100%;
+}
+#nav .body .display-1{
+	line-height: 140%;
+	font-size: 2.6rem;
+	font-weight: 700;
+	margin-bottom: 24px;
+}
+#nav .middle{
+	vertical-align: middle;
+	padding: 0 24px 0 84px;
+}
+#nav footer {
+	display: flex;
+	justify-content: flex-start;
+	width: 100%;
+	padding-bottom: 8px;
+}
+#nav a{
+	color: #00A862;
+}
+#nav footer .sign-in{
+	display: flex;
+	align-items: center;
+	padding: 3px 0;
+	margin-right: 24px;
+}
+#nav footer .register{
+	padding: 2px 12px;
+}
+#nav footer .sign-in img{
+	margin-right: 4px;
+	margin-top: -3px;
+}
+	/* 左侧覆盖 */
+#nav .overlay{
+	width: 30%;
+	background: #FFF;
+	bottom: 0;
+	box-sizing: border-box;
+	height: 100%;
+	left: 0;
+	opacity: 0;
+	overflow-y: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	visibility: hidden;
+	z-index: 1005;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+#nav .active{
+	opacity: 1;
+	visibility: visible;
+}
+#nav .overlay .container{
+	width: 100%;
+	/* overflow: hidden; */
+}
+#nav .overlay .container>*{
+	box-sizing: border-box;
+}
+#nav .overlay .container .header{
+	position: relative;
+	height: 84px;
+}
+#nav .overlay .body hr{
+	margin: 12px 0;
+	display: block;
+}
+#nav .overlay .container .header .close{
+	position: relative;
+	right: -12px;
+	top: -6px;
+	width: 48px;
+	height: 48px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0;
+}
+#nav .overlay .header .close img{
+	width: 36%;
+}
+#nav .overlay .body .container{
+	padding: 0 24px 0 84px;
+}
+#nav .overlay .body .container ul {
+    font-size: 26px;
+    font-size: 2.6rem;
+    font-weight: 700;
+    font-size: 18px;
+    font-size: 1.8rem;
+    line-height: 120%;
+    width: 100%;
+	}
+#nav .overlay .body .container ul a {
+    color: inherit;
+    display: block;
+    padding: 8px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+#nav .overlay .body footer{
+	padding: 8px 0;
+	font-size: 14px;
+	font-size: 1.6rem;
+	margin-top: 12px;
+	line-height: 160%;
+	width: 100%;
+}
+#nav .overlay>.container>footer{
+	font-size: 14px;
+	font-size: 1.4rem;
+	margin-top: 12px;
+	line-height: 160%;
+	width: 100%;
+	letter-spacing: 1px;
+}
+#nav .overlay .container>footer>.container{
+	margin: 0 24px 24px 84px;
+	padding-right: 60px;
+}
+#nav .overlay .container>footer>.container a{
+	color: rgba(0, 0, 0, 0.38);
+}
+	/* 主体设置 */
+#content{
+	width: 70%;
+	margin-left: 30%;
+}
+		/* 轮播图 */
+.minImg{
+	display: none;
+}
+		/* 精选 */
+#center ul li{
+	box-sizing: border-box;
+	width: 25%;
+	padding: 12px;
+}
+		/* 讲坛 */
